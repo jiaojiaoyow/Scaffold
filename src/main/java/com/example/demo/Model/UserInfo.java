@@ -1,7 +1,10 @@
 package com.example.demo.Model;
 
-import java.util.List;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
+import java.util.List;
+@ApiModel(value = "User", description = "用户信息描述")
 public class UserInfo {
     private String uid;
 
@@ -10,7 +13,7 @@ public class UserInfo {
     private String name;
 
     private String password;
-
+    @ApiModelProperty("加密密码的盐")
     private String salt;
 
     private Integer state;
